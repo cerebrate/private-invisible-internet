@@ -21,9 +21,9 @@ echo 'Tailscale serve i2p proxy...'
 
 export IP_ADDR=127.0.0.1
 
-/app/tailscale serve tcp:4444 tcp://${IP_ADDR}:4444
-/app/tailscale serve tcp:4445 tcp://${IP_ADDR}:4445
-/app/tailscale serve tcp:7657 tcp://${IP_ADDR}:7657
+/app/tailscale serve --bg --tcp 4444 tcp://${IP_ADDR}:4444
+/app/tailscale serve --bg --tcp 4445 tcp://${IP_ADDR}:4445
+/app/tailscale serve --bg --tcp 7657 tcp://${IP_ADDR}:7657
 
 echo 'Tailscale started'
 
